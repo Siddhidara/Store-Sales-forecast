@@ -1,0 +1,12 @@
+{
+  "tft_rmse": 888.4,
+  "tft_mape": 9.1,
+  "tft_mae": 603.9,
+  "lstm_rmse": 952.7,
+  "lstm_mape": 10.1,
+  "lstm_mae": 660.2,
+  "total_stores": 498,
+  "date_from": "2013-08-30",
+  "date_to": "2015-07-31",
+  "forecast_days": 28
+}
