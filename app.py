@@ -13,17 +13,35 @@ st.set_page_config(
 # ── Styling ───────────────────────────────────────────
 st.markdown("""
 <style>
-[data-testid="stAppViewContainer"] { background: #FAFAFA; }
-.kpi {
-  background: white;
-  border-radius: 12px;
-  border: 1px solid #E5E7EB;
-  padding: 18px;
-  text-align: center;
+/* Light theme */
+@media (prefers-color-scheme: light) {
+  [data-testid="stAppViewContainer"] { background: #FAFAFA; }
+  .kpi {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    padding: 18px;
+    text-align: center;
+  }
+  .kpi-label { font-size: 12px; color: #6B7280; }
+  .kpi-value { font-size: 26px; font-weight: bold; color: #111827; }
+  .kpi-good { color: #059669; }
 }
-.kpi-label { font-size: 12px; color: #6B7280; }
-.kpi-value { font-size: 26px; font-weight: bold; }
-.kpi-good { color: #059669; }
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  [data-testid="stAppViewContainer"] { background: #0E1117; }
+  .kpi {
+    background: #1C1F26;
+    border-radius: 12px;
+    border: 1px solid #30363D;
+    padding: 18px;
+    text-align: center;
+  }
+  .kpi-label { font-size: 12px; color: #8B949E; }
+  .kpi-value { font-size: 26px; font-weight: bold; color: #E6EDF3; }
+  .kpi-good { color: #3FB950; }
+}
 </style>
 """, unsafe_allow_html=True)
 
